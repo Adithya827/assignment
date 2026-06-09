@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--navigation-->
+  <title>Adithya MB | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">This is my Portfolio</div>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+  </header>
+<!--home -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1>Hello, I'm <span>Adithya</span></h1>
+      <p>Web Developer BE Final Year Student</p>
+      <a href="#projects" class="btn">View My Projects</a>
+      <a href="#contact" class="btn btn-border">Contact Me</a>
+    </div>
+    <div class="home-image">
+      <img src="greeting_pic.png" alt="durgesh gowda" />
+    </div>
+  </section>
+<!--about-->
+  <section id="about" class="section about-section">
+    <h2 class="section-heading">About Me</h2>
+    <div class="about-container">
+      <div class="about-img">
+        <img src="About_pic.jpg" alt="About Me" />
+      </div>
+      <div class="about-text">
+        <p>
+          Hi! My name is Adithya MB. I am a final year Engineering student at
+          <strong>maharaja institute of technology, Mysore, Karnataka</strong>.
+          I am interested in web development and I enjoy building websites
+          and learning new technologies.
+        </p>
+        <p>
+          I have learned HTML, CSS, JavaScript and a little bit of Python
+          during my course. I like to work on projects in my free time to
+          improve my skills.
+        </p>
+        <p>
+          My goal is to become a full stack developer after completing my
+          graduation and get a good job in an IT company.
+        </p>
+        <a href="#contact" class="btn">Hire Me</a>
+      </div>
+    </div>
+  </section>
+<!--skills-->
+  <section id="skills" class="section skills-section">
+    <h2 class="section-heading">My Skills</h2>
+    <p class="section-para">Technologies I have learned so far</p>
+    <ul class="skills-list">
+      <li class="skill-item">
+        <span class="skill-name">HTML5</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 90%;">85%</div>
+        </div>
+      </li>
+      <li class="skill-item">
+        <span class="skill-name">CSS3</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 80%;">80%</div>
+        </div>
+      </li>
+      <li class="skill-item">
+        <span class="skill-name">JavaScript</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 65%;">65%</div>
+        </div>
+      </li>
+      <li class="skill-item">
+        <span class="skill-name">Python</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 60%;">60%</div>
+        </div>
+      </li>
+      <li class="skill-item">
+        <span class="skill-name">MySQL</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 70%;">70%</div>
+        </div>
+      </li>
+      <li class="skill-item">
+        <span class="skill-name">GitHub</span>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 75%;">75%</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<!--my projects-->
+  <section id="projects" class="section projects-section">
+    <h2 class="section-heading">My Projects</h2>
+    <p class="section-para">Some of the projects I have made</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-top">
+          <h3>Student Result Management</h3>
+          <span class="tag">C + MySQL</span>
+        </div>
+        <p>A simple web application to manage and display student results. Admin can add marks and students can check their results by entering their roll number.</p>
+        <div class="project-links">
+          <a href="#" class="btn small-btn">View Project</a>
+          <a href="#" class="btn btn-border small-btn">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <h3>Online Book Store</h3>
+          <span class="tag">HTML + CSS + JS</span>
+        </div>
+        <p>A front-end project for an online book store where users can browse books, add to cart and see the total price. Made using HTML, CSS and JavaScript.</p>
+        <div class="project-links">
+          <a href="#" class="btn small-btn">View Project</a>
+          <a href="#" class="btn btn-border small-btn">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <h3>Weather App</h3>
+          <span class="tag">JavaScript + API</span>
+        </div>
+        <p>A weather application that shows current weather of any city using OpenWeather API. User can search any city name and get temperature and weather details.</p>
+        <div class="project-links">
+          <a href="#" class="btn small-btn">View Project</a>
+          <a href="#" class="btn btn-border small-btn">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <h3>Personal Budget Tracker</h3>
+          <span class="tag">HTML + CSS + JS</span>
+        </div>
+        <p>A budget tracking web app where users can add income and expenses. It shows total balance and a list of all transactions. Data is saved in local storage.</p>
+        <div class="project-links">
+          <a href="#" class="btn small-btn">View Project</a>
+          <a href="#" class="btn btn-border small-btn">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!--contact form-->
+  <section id="contact" class="section contact-section">
+    <h2 class="section-heading">Contact Me</h2>
+    <p class="section-para">Feel free to reach out to me</p>
+
+    <div class="contact-wrapper">
+      <div class="contact-details">
+        <div class="contact-info-item">
+          <strong>Name:</strong>
+          <span>Adithya MB</span>
+        </div>
+        <div class="contact-info-item">
+          <strong>Email:</strong>
+          <span>Adithyamb@gmail.com</span>
+        </div>
+        <div class="contact-info-item">
+          <strong>Phone:</strong>
+          <span>+91 95786 36254</span>
+        </div>
+        <div class="contact-info-item">
+          <strong>Address:</strong>
+          <span> Saraswathipuram, Mysuru, Karnataka 570009 </span>
+        </div>
+        <div class="contact-info-item">
+          <strong>College:</strong>
+          <span>maharaja institute of technology, Mysore</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="myForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn full-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+<!--footer-->
+  <footer>
+    <p>© 2025 Adithya MB | Engineering Final Year | Mysore, Karnataka</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('navMenu');
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
+
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Message sent successfully!');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
