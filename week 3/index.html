@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Smart Student Utility App</title>
+
+<link href="desing.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<h1>Smart Student Utility Web App</h1>
+
+<div class="container">
+
+<div class="card">
+<h2>Student Grade Calculator</h2>
+
+<input id="name" placeholder="Student Name">
+
+<input id="m1" type="number" placeholder="Subject 1 Marks">
+<input id="m2" type="number" placeholder="Subject 2 Marks">
+<input id="m3" type="number" placeholder="Subject 3 Marks">
+<input id="m4" type="number" placeholder="Subject 4 Marks">
+<input id="m5" type="number" placeholder="Subject 5 Marks">
+
+<button onclick="calculateGrade()">Calculate Grade</button>
+
+<div id="gradeResult" class="result"></div>
+</div>
+
+<!--This for Palindrome Checker only display not logic -->
+<div class="card">
+<h2>Palindrome Checker</h2>
+
+<input id="palWord" placeholder="Enter word">
+<button onclick="checkPalindrome()">Check</button>
+
+<div id="palResult" class="result"></div>
+</div>
+
+<!-- Number Analyzer-->
+<div class="card">
+<h2>Number Analyzer</h2>
+
+<input id="num" type="number" placeholder="Enter number">
+<button onclick="analyzeNumber()">Analyze</button>
+
+<div id="numResult" class="result"></div>
+</div>
+
+<!--  Login Validation -->
+<div class="card">
+<h2>Simple Login</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<div id="loginResult" class="result"></div>
+</div>
+
+</div>
+
+<script>
+
+ Grade Calculator 
+function calculateGrade(){
+
+    let name = document.getElementById("name").value;
+
+    let marks = [
+        Number(m1.value),
+        Number(m2.value),
+        Number(m3.value),
+        Number(m4.value),
+        Number(m5.value)
+    ];
+
+    let total = 0;
+
+    for(let i=0;i<marks.length;i++){
+        total += marks[i];
+    }
+
+    let avg = total / marks.length;
+    let grade;
+
+    if(avg >= 90) grade="A+";
+    else if(avg >=75) grade="A";
+    else if(avg >=60) grade="B";
+    else if(avg >=50) grade="C";
+    else grade="Fail";
+
+    document.getElementById("gradeResult").innerHTML =
+        `Name: ${name}<br>
+         Total: ${total}<br>
+         Average: ${avg.toFixed(2)}<br>
+         Grade: ${grade}`;
+}
+
+
+/*fuction for Palindrome Checker  */
+function checkPalindrome(){
+
+    let word = document.getElementById("palWord").value;
+    let reverse = "";
+
+    for(let i=word.length-1;i>=0;i--){
+        reverse += word[i];
+    }
+
+    if(word === reverse)
+        palResult.innerText = "Palindrome";
+    else
+        palResult.innerText = "Not a Palindrome";
+}
+
+
+//fucntion for Number Analyzer  
+function analyzeNumber(){
+
+    let n = Number(document.getElementById("num").value);
+    let result="";
+
+    // Even or Odd          (ternary)
+    result += (n%2===0) ? "Even<br>" : "Odd<br>";
+
+    // Positive Negative Zero
+    if(n>0) result+="Positive<br>";
+    else if(n<0) result+="Negative<br>";
+    else result+="Zero<br>";
+
+    // to print the the n number, from user given input
+    result+="Numbers: ";
+    for(let i=1;i<=n;i++){
+        result += i+" ";
+    }
+
+    numResult.innerHTML = result;
+}
+
+/*  Login validation*/
+function login(){
+
+    let user = username.value;
+    let pass = password.value;
+
+    if(user==="admin" && pass==="12345")
+        loginResult.innerText="Login Successful";
+    else
+        loginResult.innerText="Invalid Credentials";
+}
+
+</script>
+
+</body>
+</html>
