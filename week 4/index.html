@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>My Dashboard</h1>
+      <p>Interactive Web App using DOM & APIs</p>
+    </div>
+    <div class="header-right">
+      <button id="toggle-btn" onclick="toggleDark()">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#user-section"> User Generator</a></li>
+      <li><a href="#weather-section">Weather</a></li>
+      <li><a href="#todo-section"> To-Do List</a></li>
+      <li><a href="#search-section"> Product Search</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="section" id="user-section">
+      <h2>1. Random User Generator</h2>
+      <button onclick="getUser()">Generate User</button>
+      <p id="loading">Loading...</p>
+      <div id="user-card">
+        <img id="user-img" src="" alt="Profile Picture" />
+        <p id="user-name"></p>
+        <p id="user-email"></p>
+        <p id="user-country"></p>
+      </div>
+    </div>
+
+    <div class="section" id="weather-section">
+      <h2>2. Weather Search</h2>
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button onclick="getWeather()">Search</button>
+      <div id="weather-result">
+        <p id="weather-city"></p>
+        <p id="weather-temp"></p>
+        <p id="weather-wind"></p>
+        <p id="weather-condition"></p>
+      </div>
+    </div>
+
+    <div class="section" id="todo-section">
+      <h2>3. To-Do List</h2>
+      <input type="text" id="task-input" placeholder="Enter a task" />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <div class="section" id="search-section">
+      <h2>4. Live Product Search</h2>
+      <input type="text" id="search-input" placeholder="Search products..." oninput="filterProducts()" />
+      <ul id="product-list"></ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 My Dashboard Project</p>
+      <p>Built with HTML, CSS & JavaScript</p>
+      <div class="footer-links">
+        <span>DOM Manipulation</span>
+        <span>|</span>
+        <span>API Integration</span>
+        <span>|</span>
+        <span>Responsive Design</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
