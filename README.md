@@ -47,11 +47,4 @@ git clone https://github.com/Adithya827/assignment.git
 
 ---
 
-### Related Internship Certificate
-
-📄 MERN Stack Internship Certificate
-[View Certificate](./AitchNu_MERN_Internship_Certificate.pdf)
-
----
-
 ⭐ This internship provided hands-on experience in full-stack web development and strengthened my understanding of industry-standard development practices.
